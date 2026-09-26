@@ -11,6 +11,6 @@ resource "aws_nat_gateway" "this" {
   subnet_id     = var.subnet_id
 }
 
-output "nat_gateway_id" {
+output "id" {
   value = aws_nat_gateway.this.id
 }
