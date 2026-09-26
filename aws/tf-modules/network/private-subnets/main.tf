@@ -3,7 +3,7 @@ resource "aws_subnet" "private" {
   vpc_id            = var.vpc_id
   cidr_block        = each.value.cidr
   availability_zone = each.value.az
-  tags              = merge(var.tags, { Name = each.key })
+  tags              = merge(var.tags, { Name = "private-${each.key}" })
 }
 
 resource "aws_route_table" "main" {
