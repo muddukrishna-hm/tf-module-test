@@ -202,7 +202,8 @@ def build_plan(sha, overrides):
             "module": module, "last": fmt(last_v) if last_v else "-", "last_ref": last_ref,
             "commit": c, "interface": i, "resources": r + (" +review" if review else ""),
             "calculated": bump, "bump": bump, "status": "review-required" if review else "auto",
-            "reasons": cr + ir + rr, "override": None,
+            "reasons": cr + ir + rr or ["values or internal logic changed only (same interface and resources)"],
+            "override": None,
         }
         if module in overrides:
             new_bump, reason = overrides[module]
