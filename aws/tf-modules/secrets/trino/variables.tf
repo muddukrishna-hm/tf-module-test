@@ -11,5 +11,5 @@ variable "path" {
 variable "password_length" {
   description = "Password length"
   type        = number
-  default     = 32
+  default     = 40
 }
