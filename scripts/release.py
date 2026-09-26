@@ -210,6 +210,8 @@ def build_plan(sha, overrides):
             entry["override"] = f"{bump} -> {new_bump}: {reason}"
             entry["bump"] = new_bump
         entry["next"] = fmt(next_version(last_v, entry["bump"])) if last_v else "v1.0.0"
+        if not last_v:
+            entry["bump"] = "initial"
         plan.append(entry)
     return plan
 
