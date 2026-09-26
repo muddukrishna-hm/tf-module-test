@@ -1,7 +1,7 @@
 resource "random_password" "user_password" {
   for_each = toset(var.users)
   length   = var.password_length
-  special  = false
+  special  = true
 }
 
 resource "aws_secretsmanager_secret" "this" {
