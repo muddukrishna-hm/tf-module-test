@@ -183,7 +183,7 @@ def main():
         sys.exit("run on main")
     env, slug = auth_env(token), repo_slug()
 
-    git("fetch", "--tags", "--prune-tags", "origin", env=env)
+    git("fetch", "--prune", "--prune-tags", "--tags", "origin", env=env)
     git("push", "origin", "main", env=env)
     sha = git("rev-parse", "HEAD")
     modules = [l.strip() for l in open("modules.txt") if l.strip()]
