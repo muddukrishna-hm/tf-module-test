@@ -16,3 +16,8 @@ variable "map_public_ip" {
   type    = bool
   default = false
 }
+
+variable "enable_ipv6" {
+  type    = bool
+  default = false
+}
