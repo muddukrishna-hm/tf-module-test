@@ -1,0 +1,2 @@
+secrets/trino
+network/private-subnets
