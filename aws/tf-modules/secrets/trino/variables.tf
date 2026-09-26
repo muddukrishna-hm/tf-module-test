@@ -1,6 +1,11 @@
 variable "users" {
   description = "Users to generate passwords for"
   type        = list(string)
+
+  validation {
+    condition     = length(var.users) > 0
+    error_message = "At least one user is required."
+  }
 }
 
 variable "path" {
