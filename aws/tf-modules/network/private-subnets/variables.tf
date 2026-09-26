@@ -11,3 +11,8 @@ variable "tags" {
   type    = map(string)
   default = {}
 }
+
+variable "map_public_ip" {
+  type    = bool
+  default = false
+}
