@@ -3,5 +3,5 @@ output "subnet_ids" {
 }
 
 output "route_table_id" {
-  value = aws_route_table.private.id
+  value = aws_route_table.main.id
 }

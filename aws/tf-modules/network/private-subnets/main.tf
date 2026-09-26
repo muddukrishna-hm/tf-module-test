@@ -6,7 +6,7 @@ resource "aws_subnet" "private" {
   tags              = merge(var.tags, { Name = each.key })
 }
 
-resource "aws_route_table" "private" {
+resource "aws_route_table" "main" {
   vpc_id = var.vpc_id
   tags   = var.tags
 }
