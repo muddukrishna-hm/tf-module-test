@@ -6,7 +6,7 @@ resource "random_password" "user_password" {
 
 resource "aws_secretsmanager_secret" "this" {
   name                    = var.path
-  recovery_window_in_days = 30
+  recovery_window_in_days = 7
 }
 
 resource "aws_secretsmanager_secret_version" "trino_passwords_version" {
